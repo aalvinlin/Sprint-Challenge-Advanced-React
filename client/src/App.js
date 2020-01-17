@@ -4,10 +4,6 @@ import axios from "axios"
 import Navbar from "./components/Navbar";
 import DataTable from "./components/DataTable";
 
-import bg1 from "./images/soccer_field1.webp";
-import bg2 from "./images/soccer_field2.webp";
-import bg3 from "./images/soccer_field3.webp";
-
 import './App.css';
 
 class App extends React.Component {
