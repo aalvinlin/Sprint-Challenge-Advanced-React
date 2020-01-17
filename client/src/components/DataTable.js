@@ -1,6 +1,29 @@
 import React from "react";
 
+import sortByName from "./utils/sortByName";
+import sortByCountry from "./utils/sortByCountry";
+import sortBySearches from "./utils/sortBySearches";
+import sortById from "./utils/sortById";
+
 const DataTable = ({playerData}) => {
+
+    const sortBy = (heading) => {
+
+        if (heading === "name")
+            { playerData = sortByName(playerData); }
+
+        else if (heading === "country")
+            { playerData = sortByCountry(playerData); }
+        
+        else if (heading === "Searches")
+            { playerData = sortBySearches(playerData); }
+
+        else if (heading === "Id")
+            { playerData = sortById(playerData); }
+
+        console.log(playerData);
+    }
+
 
     return (
 
@@ -8,7 +31,7 @@ const DataTable = ({playerData}) => {
             <thead>
                 <tr>
                     {Object.keys(playerData[0]).map(heading =>
-                        { return (<th key={heading}>{heading[0].toUpperCase() + heading.slice(1, heading.length)}</th>) }
+                        { return (<th key={heading} onClick={sortBy(heading)}>{heading[0].toUpperCase() + heading.slice(1, heading.length)}</th>) }
                     )}
                 </tr>
             </thead>

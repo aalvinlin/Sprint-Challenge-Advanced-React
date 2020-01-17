@@ -49,3 +49,7 @@ header p {
 .bg3 h1, .bg3 p {
   color: #CCCCCC;
 }
+
+th {
+  cursor: pointer;
+}
