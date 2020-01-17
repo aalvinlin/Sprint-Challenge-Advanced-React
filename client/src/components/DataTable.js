@@ -15,10 +15,10 @@ const DataTable = ({playerData}) => {
         else if (heading === "country")
             { playerData = sortByCountry(playerData); }
         
-        else if (heading === "Searches")
+        else if (heading === "searches")
             { playerData = sortBySearches(playerData); }
 
-        else if (heading === "Id")
+        else if (heading === "id")
             { playerData = sortById(playerData); }
 
         console.log(playerData);

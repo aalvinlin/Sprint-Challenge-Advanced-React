@@ -1,6 +1,6 @@
 const sortByName = (playerData) => {
  
-    playerData.sort((player1, player2) => player2[0] - player1[0]);
+    playerData.sort((player1, player2) => player2.name - player1.name);
 
     return playerData;
 

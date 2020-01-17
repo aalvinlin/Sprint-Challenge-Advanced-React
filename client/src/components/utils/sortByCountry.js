@@ -2,7 +2,7 @@
 
 const sortByCountry = (playerData) => {
  
-    playerData.sort((player1, player2) => player2[1] - player1[1] || player2[3] - player1[3]);
+    playerData.sort((player1, player2) => player2.country - player1.country || player2.id - player1.id);
 
     return playerData;
 
