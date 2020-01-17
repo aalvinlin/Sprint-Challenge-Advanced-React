@@ -1,11 +1,6 @@
-import sortByName from "./sortByName";
+import sortByCountry from "./sortByCountry";
 
-    // let unsorted = [{"Zach", 5, 10], {"Barbara", 8, 1], {"Arthur", 100, 1000]];
-    // let sorted = sortByName(unsorted)
-
-    // console.log(sorted);
-
-test("sortbyName is given an array", () => {
+test("sortbyCountry is given an array", () => {
 
     expect(Array.isArray({}).toBe(true));
     expect(Array.isArray(0).toBe(false));
@@ -21,7 +16,7 @@ test("every item in the subarray is an object", () => {
     let totalArrayElements = unsorted.filter(element => element !== null && typeof element === "object" && !Array.isArray(element));
     expect((totalArrayElements === unsorted.length).toBe(false));
     
-    unsorted = ["abc", "def", {"ghi": "test"}];
+    unsorted = ["3212351313562", "423747236", {"2342463": "23642346"}];
     totalArrayElements = unsorted.filter(element => element !== null && typeof element === "object" && !Array.isArray(element));
     expect((totalArrayElements === unsorted.length).toBe(false));
     
@@ -29,7 +24,7 @@ test("every item in the subarray is an object", () => {
     totalArrayElements = unsorted.filter(element => element !== null && typeof element === "object" && !Array.isArray(element));
     expect((totalArrayElements === unsorted.length).toBe(true));
     
-    unsorted = [[5], 10, [15, 20, 25], 30];
+    unsorted = [[23], 964569, [1, 12, 1634], 436];
     totalArrayElements = unsorted.filter(element => element !== null && typeof element === "object" && !Array.isArray(element));
     expect((totalArrayElements === unsorted.length).toBe(false));
     
@@ -39,17 +34,17 @@ test("every item in the subarray is an object", () => {
     
 });
 
-test("sortbyName sorts an array of arrays by the value of the 'name' key", () => {
+test("sortbyCountry sorts an array of arrays by the value of the 'Country' key", () => {
 
-    let unsorted = [{name: "a"}, {name: "m"}, {name: "c"}, {name: "j"}, {name: "k"}];
-    let sorted = sortByname(unsorted);
-    expect(sorted.toBe([{name: "a"}, {name: "c"}, {name: "j"}, {name: "m"}, {name: "k"}]));
+    let unsorted = [{country: "a"}, {country: "m"}, {country: "c"}, {country: "j"}, {country: "k"}];
+    let sorted = sortByCountry(unsorted);
+    expect(sorted.toBe([{country: "a"}, {country: "c"}, {country: "j"}, {country: "m"}, {country: "k"}]));
 
-    unsorted = [{name: "one"}, {name: "two"}, {name: "three"}, {name: "four"}, {name: "five"}];
-    sorted = sortByname(unsorted);
-    expect(sorted.toBe([{name: "five"}, {name: "four"}, {name: "one"}, {name: "three"},  {name: "two"}]));
+    unsorted = [{country: "one"}, {country: "two"}, {country: "three"}, {country: "four"}, {country: "five"}];
+    sorted = sortByCountry(unsorted);
+    expect(sorted.toBe([{country: "five"}, {country: "four"}, {country: "one"}, {country: "three"},  {country: "two"}]));
 
-    unsorted = [{name: "Zach", "test": 10}, {name: "Barbara", "test": 1}, {name: "Arthur", "test": 1000}];
-    sorted = sortByname(unsorted);
-    expect(sorted.toBe([{name: "Arthur", "test": 1000}, {name: "Barbara", "test": 1}, {name: "Zach", "test": 10}]));
+    unsorted = [{country: "Zach", "test": 10}, {country: "Barbara", "test": 1}, {country: "Arthur", "test": 1000}];
+    sorted = sortByCountry(unsorted);
+    expect(sorted.toBe([{country: "Arthur", "test": 1000}, {country: "Barbara", "test": 1}, {country: "Zach", "test": 10}]));
 });
